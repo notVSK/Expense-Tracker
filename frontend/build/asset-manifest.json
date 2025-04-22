@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b5b8381d.css",
+    "main.js": "/static/js/main.433f9106.js",
+    "static/media/avatar.png": "/static/media/avatar.417a43ec1b2211879a8c.png",
+    "static/media/logo_kharcha_guru.png": "/static/media/logo_kharcha_guru.c0145234269d8504b416.png",
+    "static/media/bg.jpg": "/static/media/bg.d963c1d295c8963df65b.jpg",
+    "index.html": "/index.html",
+    "main.b5b8381d.css.map": "/static/css/main.b5b8381d.css.map",
+    "main.433f9106.js.map": "/static/js/main.433f9106.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5b8381d.css",
+    "static/js/main.433f9106.js"
+  ]
+}
