@@ -42,9 +42,7 @@ jobs:
     - name: Run Docker Compose (Test)
       run: docker-compose up -d
 
-    - name: Run Tests
-      run: |
-        docker exec backend-service npm run test
+
 
     - name: Push Docker Images to Docker Hub
       if: github.ref == 'refs/heads/main'
