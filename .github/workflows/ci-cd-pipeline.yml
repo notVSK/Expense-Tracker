@@ -50,10 +50,10 @@ jobs:
     - name: Push Docker Images to Docker Hub
       if: github.ref == 'refs/heads/main'
       run: |
-        docker tag my-backend username/my-backend:latest
-        docker tag my-frontend username/my-frontend:latest
-        docker push username/my-backend:latest
-        docker push username/my-frontend:latest
+        docker tag notvsk/my-backend:latest
+        docker tag notvsk/my-frontend:latest
+        docker push notvsk/my-backend:latest
+        docker push notvsk/my-frontend:latest
 
     - name: Clean Up
       run: docker-compose down
