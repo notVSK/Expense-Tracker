@@ -8,9 +8,9 @@ import IncomeItem from '../IncomeItem/IncomeItem';
 function Income() {
     const {addIncome,incomes, getIncomes, deleteIncome, totalIncome} = useGlobalContext()
 
-    useEffect(() =>{
-        getIncomes()
-    }, [])
+    useEffect(() => {
+        getIncomes();
+      }, [getIncomes]);
     return (
         <IncomeStyled>
             <InnerLayout>
@@ -25,13 +25,13 @@ function Income() {
                             const {_id, title, amount, date, category, description, type} = income;
                             return <IncomeItem
                                 key={_id}
-                                id={_id} 
-                                title={title} 
-                                description={description} 
-                                amount={amount} 
-                                date={date} 
+                                id={_id}
+                                title={title}
+                                description={description}
+                                amount={amount}
+                                date={date}
                                 type={type}
-                                category={category} 
+                                category={category}
                                 indicatorColor="var(--color-green)"
                                 deleteItem={deleteIncome}
                             />

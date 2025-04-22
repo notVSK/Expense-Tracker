@@ -15,7 +15,7 @@ import Signup from './components/Signup/Signup';
 
 function App() {
   const [active, setActive] = useState(1);
-  const global = useGlobalContext();
+
   const { user } = useContext(AuthContext);
 
   const displayData = () => {

@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import avatar from '../../img/avatar.png';
-import { signout,user } from '../../utils/icons';
+import { signout } from '../../utils/icons';
 import { menuItems } from '../../utils/menuItems';
 import { AuthContext } from '../../context/AuthContext';
 

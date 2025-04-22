@@ -10,9 +10,9 @@ function Dashboard() {
     const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
 
     useEffect(() => {
-        getIncomes()
-        getExpenses()
-    }, [])
+        getExpenses();
+        getIncomes();
+      }, [getExpenses, getIncomes]);
 
     return (
         <DashboardStyled>
@@ -131,7 +131,7 @@ const DashboardStyled = styled.div`
                 }
             }
             .salary-item{
-            
+
                 background: #FCF6F9;
                 border: 2px solid #FFFFFF;
                 box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
