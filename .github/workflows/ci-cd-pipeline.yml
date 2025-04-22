@@ -19,7 +19,13 @@ jobs:
         fetch-depth: 0  # Ensure full history is fetched
 
     - name: List files in the repository (Debugging)
-      run: ls -R
+      run: |
+        echo "Listing root directory contents"
+        ls -l
+        echo "Listing Backend directory contents"
+        ls -l ./Backend
+        echo "Listing Frontend directory contents"
+        ls -l ./Frontend
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
@@ -45,7 +51,7 @@ jobs:
         docker-compose version
 
     - name: Run Docker Compose (Test)
-      run: docker-compose -f docker-compose.yml up -d  # Make sure to reference your docker-compose.yml
+      run: docker-compose -f ./docker-compose.yml up -d  # Ensure this path is correct
 
     - name: Run Tests
       run: |
@@ -61,4 +67,4 @@ jobs:
         docker push username/my-frontend:latest
 
     - name: Clean Up
-      run: docker-compose -f docker-compose.yml down
+      run: docker-compose -f ./docker-compose.yml down
