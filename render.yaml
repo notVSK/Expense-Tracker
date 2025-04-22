@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: expense-tracker-app
+    env: docker
+    repo: https://github.com/notVSK/Expense-tracker
+    branch: main
+    plan: free
+    region: oregon
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    autoDeploy: true
