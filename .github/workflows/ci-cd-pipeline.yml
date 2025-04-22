@@ -18,6 +18,9 @@ jobs:
       with:
         fetch-depth: 0  # Ensure full history is fetched
 
+    - name: List files in the repository (Debugging)
+      run: ls -R
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
