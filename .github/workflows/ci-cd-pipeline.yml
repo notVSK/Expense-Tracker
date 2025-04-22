@@ -28,10 +28,10 @@ jobs:
           ${{ runner.os }}-buildx-
 
     - name: Build Backend Docker Image
-      run: docker build -t my-backend ./backend
+      run: docker build -t my-backend ./Backend
 
     - name: Build Frontend Docker Image
-      run: docker build -t my-frontend ./frontend
+      run: docker build -t my-frontend ./Frontend
 
     - name: Run Docker Compose (Test)
       run: docker-compose up -d
